@@ -1,12 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### Group Members
-# 
-# - Bikesh Prajapati	C0859472
-# - Padam Regmi	C0858265
-# - Rosy Shrestha	C0857467
-# - Hemanta Rijal	C0835075
 # - Shreebatsa Aryal	C0859473
 
 # ## Lung Cancer Prediction
@@ -224,7 +218,7 @@ plt.show()
 
 # In[17]:
 
-
+#showing plot
 sns.jointplot(data=data_copy, x='Air Pollution', y='Level',kind = 'kde' )
 plt.show()
 
@@ -241,7 +235,7 @@ plt.show()
 # 
 
 # In[19]:
-
+#showing barplot
 
 fig = plt.figure(figsize = (10,6))
 sns.barplot(data=data_copy, y='Alcohol use', x='Level')
@@ -318,7 +312,6 @@ X = sc.fit_transform(X)
 
 # In[27]:
 
-
 from sklearn.decomposition import PCA
 pca = PCA()
 pca.fit(X)
@@ -359,14 +352,11 @@ sns.countplot(data_copy['Level'])
 
 # In[32]:
 
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2 ,random_state=50)
 
 
 # ## Build Model
-
 # #### Table of models and their scores
-# 
 
 # In[33]:
 
@@ -379,7 +369,6 @@ x.field_names = ["Model", "Train Score", "Test Score", "R2 Score", "Mean Absolut
 # ### Model 1: Linear Regression 
 
 # In[34]:
-
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
